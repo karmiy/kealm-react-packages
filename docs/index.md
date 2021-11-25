@@ -14,6 +14,6 @@ features:
     desc: 尽可能从 0 实现，减少对第三方库的强依赖与二次封装
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/d1ee0c6f-5aed-4a45-a507-339a4bfe076c/k7bjsocq_w144_h144.png
     title: 视图规范
-    desc: 互医业务线 UI 设计
+    desc: 定制 UI 设计
 footer: Powered by [karmiy](https://github.com/karmiy/kealm-react-packages)
 ---

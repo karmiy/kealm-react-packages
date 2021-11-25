@@ -9,7 +9,7 @@ const isReactMobileLibEntry = false;
 export default defineConfig({
   mode: 'site',
   title: 'Kealm',
-  favicon: 'http://karmiy.gitee.io/kealm-react-components/favicon.ico',
+  favicon: '/logo.ico',
   // logo: 'https://static.seeyouyima.com/www.meiyou.com/meiyou-4c6b85bc28c1410ac99d3392c30a1283.png',
   logo: '/logo.png',
   outputPath: 'docs-dist',
@@ -22,7 +22,7 @@ export default defineConfig({
   chainWebpack: memo => memo.resolve.extensions.add('.css'),
   alias: {
     '@kealm/react-packages': path.resolve(__dirname, './src'),
-    ...(isReactMobileLibEntry ? { '@kealm/react-components': path.resolve(__dirname, './packages/react-components') } : null),
+    ...(isReactMobileLibEntry ? { '@kealm/react-mobile': path.resolve(__dirname, './packages/react-mobile') } : null),
     'react-native$': path.resolve(__dirname, './plugins/react-native-web'),
     'react-native-linear-gradient': 'react-native-web-linear-gradient',
   },
@@ -32,12 +32,12 @@ export default defineConfig({
     [
       'import',
       {
-        libraryName: '@kealm/react-components',
+        libraryName: '@kealm/react-mobile',
         libraryDirectory: isReactMobileLibEntry ? 'lib' : 'src',
         camel2DashComponentName: true,
-        customStyleName: name => `@kealm/react-components/${isReactMobileLibEntry ? 'lib' : 'src'}/style/${name}.scss`,
+        customStyleName: name => `@kealm/react-mobile/${isReactMobileLibEntry ? 'lib' : 'src'}/style/${name}.scss`,
       },
-      '@kealm/react-components',
+      '@kealm/react-mobile',
     ],
     ['import', { 'libraryName': 'antd', 'libraryDirectory': 'es', 'style': 'css' }, 'antd'],
   ],

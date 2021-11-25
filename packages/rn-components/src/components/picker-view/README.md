@@ -22,7 +22,7 @@ import { Blockquote } from '@kealm/react-packages';
 
 export default () => (
   <Blockquote title='TIP'>
-    暂无仿真机示例，可参考 H5 组件库 <Link to='/react-components/data/picker-view'>PickerView</Link>
+    暂无仿真机示例，可参考 H5 组件库 <Link to='/react-mobile/data/picker-view'>PickerView</Link>
   </Blockquote>
 );
 ```

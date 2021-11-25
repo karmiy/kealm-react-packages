@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { SafeAreaBottom } from '@kealm/react-components';
+import { SafeAreaBottom } from '@kealm/react-mobile';
 
 const list = [];
 

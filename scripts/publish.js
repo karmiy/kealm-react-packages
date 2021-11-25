@@ -13,7 +13,7 @@ const call = cmd => {
 const readdir = promisify(fs.readdir);
 const packagesDir = path.resolve(__dirname, '../packages');
 // 其他包需要依赖 react-hooks，需要先执行
-const packages = ['react-hooks', 'react-components', 'rn-components', 'rn-sdk'];
+const packages = ['react-hooks', 'react-mobile', 'rn-components'];
 
 (async () => {
     // for (const dir of await readdir(packagesDir)) {

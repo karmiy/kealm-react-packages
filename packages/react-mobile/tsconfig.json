@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "declaration": true,
+    "pretty": true,
+    "sourceMap": false,
+    "strict": true,
+    "skipLibCheck": true, // 引入的 lib 内 ts 类型检查要忽略，否则两侧都引入如 React，会有 'Duplicate identifier' error
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": false,
+    "noFallthroughCasesInSwitch": true,
+    "outDir": "lib",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "importHelpers": true,
+    "types": ["node"],
+    "downlevelIteration": true,
+    "baseUrl": "./",
+    "paths": {
+      "@kealm/react-mobile": ["src"],
+      "@kealm/react-packages": ["../../src"],
+    },
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
