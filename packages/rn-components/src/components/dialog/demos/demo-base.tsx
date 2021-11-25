@@ -10,7 +10,7 @@ export default () => {
             <Button plain onPress={() => setVisible(true)}>
                 Open Dialog
             </Button>
-            <Dialog visible={visible} onVisibleChange={setVisible} title='美柚请求使用定位信息权限'>
+            <Dialog visible={visible} onVisibleChange={setVisible} title='系统请求使用定位信息权限'>
                 <Text style={styles.content}>为了更好的提供本地天气服务，她她圈和发现内容</Text>
             </Dialog>
         </PortalWrapper>

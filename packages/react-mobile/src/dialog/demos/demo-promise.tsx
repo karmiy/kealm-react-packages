@@ -5,7 +5,7 @@ import { Button } from 'antd';
 export default () => {
     const openDialog = useCallback(async () => {
         const { promisify } = Dialog.confirm({
-            title: '美柚请求使用定位信息权限',
+            title: '系统请求使用定位信息权限',
             content: '为了更好的提供本地天气服务，她她圈和发现内容',
         });
 

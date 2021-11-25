@@ -21,7 +21,7 @@ const Demo: FC = () => {
 
     const dialogProps = useMemo(() => {
         return {
-            title: '美柚请求使用定位信息权限',
+            title: '系统请求使用定位信息权限',
             maskClosable,
             okText: toggleBtnText ? '了解' : undefined,
             cancelText: toggleBtnText ? '算了' : undefined,
