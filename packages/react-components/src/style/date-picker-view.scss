@@ -1,0 +1,19 @@
+@import 'mixin/mixin';
+@import 'mixin/utils';
+@import 'common/var';
+@import 'picker-view';
+
+@include b(date-picker-view) {
+    display: flex;
+
+    @include when(crowded) {
+        @include e(item) {
+            flex: auto;
+            flex-grow: 1;
+        }
+    }
+
+    @include e(item) {
+        flex: 1;
+    }
+}

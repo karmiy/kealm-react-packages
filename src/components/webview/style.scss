@@ -1,0 +1,54 @@
+@import '../../styles';
+
+@include b(webview) {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+
+    @include when(grey) {
+        background-color: $background-color-light-m;
+    }
+    
+    @include e(header) {
+        box-sizing: border-box;
+        display: flex;
+        position: relative;
+        height: 44px;
+        border-bottom: 1px solid $border-color-base;
+        background-color: #fff;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+
+        @include dark-theme {
+            border-bottom: $dark-theme-border-color-base;
+            background-color: $dark-theme-background-color-base;
+        }
+
+        &-arrow {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+
+    @include e(content) {
+        flex: 1;
+        padding-bottom: 64px;
+        overflow: auto;
+
+        @include dark-theme {
+            background-color: $dark-theme-background-color-dark-m;
+        }
+    }
+
+    @include e(title) {
+        padding-top: 32px;
+        padding-bottom: 16px;
+        font-size: 16px;
+        color: $color-text-regular;
+    }
+}

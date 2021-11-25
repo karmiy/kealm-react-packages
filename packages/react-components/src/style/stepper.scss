@@ -1,0 +1,99 @@
+@import 'mixin/mixin';
+@import 'mixin/utils';
+@import 'mixin/config';
+@import 'common/var';
+@import 'input';
+
+@include b(stepper) {
+    box-sizing: border-box;
+    display: inline-flex;
+    position: relative;
+    width: $c-stepper-width;
+    height: $c-stepper-height;
+    border-radius: $c-stepper-radius;
+    background-color: $c-stepper-background-color;
+    vertical-align: middle;
+
+    @include thinBorder((bottom, top, left, right), $c-stepper-border-color, $c-stepper-radius);
+
+    @include when(plain) {
+        background-color: transparent;
+
+        &::after {
+            content: none;
+        }
+
+        @include e(btn) {
+            border-radius: 50%;
+            background-color: $c-stepper-background-color;
+            overflow: hidden;
+
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    @include e(btn) {
+        box-sizing: border-box;
+        display: flex;
+        position: relative;
+        width: $c-stepper-height;
+        flex-grow: 0;
+        flex-shrink: 0;
+        cursor: pointer;
+
+        @include when(disabled) {
+            cursor: not-allowed;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @include e(decrease) {
+        @include thinBorder(right, $c-stepper-border-color);
+    }
+
+    @include e(increase) {
+        @include thinBorder(left, $c-stepper-border-color);
+    }
+
+    @include e(count) {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        font-size: $c-stepper-plain-font-size;
+        font-weight: bold;
+    }
+
+    @include e(input) {
+        display: flex;
+
+        @include when(readonly) {
+            .my-input {
+                @include when(disabled) {
+                    cursor: initial;
+
+                    .my-input__inner {
+                        color: $c-input-text-color;
+                        -webkit-text-fill-color: $c-input-text-color;
+                        cursor: initial;
+                    }
+                }
+            }
+        }
+
+        .my-input {
+            height: 100%;
+            padding: 0 4px;
+        
+            .my-input__inner {
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "@kealm/react-hooks",
+    "version": "1.0.5",
+    "description": "React hooks",
+    "main": "lib/index.js",
+    "typings": "lib/index.d.ts",
+    "scripts": {
+        "build:lib": "tsc -p ./tsconfig.prod.json",
+        "publish": "npm run build:lib && node scripts/release.js && cd lib && npm publish"
+    },
+    "peerDependencies": {
+        "react": "^16.8.0"
+    },
+    "devDependencies": {
+        "typescript": "^4.2.3"
+    },
+    "license": "ISC",
+    "dependencies": {
+        "tslib": "^2.2.0"
+    }
+}

@@ -1,0 +1,75 @@
+@import 'mixin/mixin';
+@import 'mixin/utils';
+@import 'common/var';
+@import 'pop';
+
+@include b(dialog) {
+    width: $c-dialog-width;
+    border-radius: $c-dialog-radius;
+    background-color: $c-dialog-background-color;
+    
+    @include when(plain) {
+        .my-dialog__body {
+            display: flex;
+            min-height: $c-dialog-body-min-height-without-title;
+            align-items: center;
+        }
+
+        .my-dialog__content {
+            margin: $c-dialog-content-margin-vertical-without-title 0;
+        }
+    }
+
+    @include e(body) {
+        position: relative;
+        padding: 0 $c-dialog-body-padding-horizontal;
+        overflow: hidden;
+        color: $color-text-primary;
+    }
+
+    @include e(title) {
+        width: 100%;
+        margin: $c-dialog-title-margin-top 0 $c-dialog-title-margin-bottom;
+        line-height: $c-dialog-title-line-height;
+        font-size: $c-dialog-title-font-size;
+        font-weight: $c-dialog-title-font-weight;
+        text-align: center;
+    }
+
+    @include e(content) {
+        width: 100%;
+        line-height: $c-dialog-content-line-height;
+        margin-bottom: $c-dialog-content-margin-bottom;
+        font-size: $c-dialog-content-font-size;
+        text-align: center;
+        letter-spacing: $c-dialog-content-letter-spacing;
+    }
+
+    @include e(footer) {
+        display: flex;
+        position: relative;
+        height: $c-dialog-footer-height;
+        font-size: $c-dialog-footer-font-size;
+        color: $c-dialog-footer-text-color;
+
+        @include thinBorder((top), $c-dialog-footer-border-color);
+
+        span {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            @include when(cancel) {
+                position: relative;
+
+                @include thinBorder((right), $c-dialog-footer-border-color);
+            }
+
+            @include when(ok) {
+                color: $c-dialog-footer-ok-text-color;
+            }
+        }
+    }
+}

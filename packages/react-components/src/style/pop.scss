@@ -1,0 +1,47 @@
+@import 'common/var';
+@import 'common/overlay';
+@import 'mixin/mixin';
+@import 'mixin/utils';
+
+// TODO: 不需要放在 var.scss，时长由 JS 来控制
+$c-pop-duration: $animation-duration-fast;
+
+@include b(pop) {
+    position: fixed;
+    z-index: $c-pop-z-index;
+    top: 0;
+    left: 0;
+
+    @include m(center) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* animation */
+    &-fade-appear {
+        opacity: 0;
+    }
+
+    &-fade-appear-active {
+        opacity: 1;
+        transition: opacity $c-pop-duration;
+    }
+
+    &-fade-enter {
+        opacity: 0;
+    }
+
+    &-fade-enter-active {
+        opacity: 1;
+        transition: opacity $c-pop-duration;
+    }
+    &-fade-exit {
+        opacity: 1;
+    }
+    
+    &-fade-exit-active {
+        opacity: 0;
+        transition: opacity $c-pop-duration;
+    }
+}

@@ -1,0 +1,10 @@
+@import 'mixin/mixin';
+@import 'common/var';
+
+@include b(safe-area-bar) {
+    height: 20px;
+
+    @include when(fs) {
+        height: 44px;
+    }
+}

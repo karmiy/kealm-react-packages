@@ -1,0 +1,14 @@
+stages:
+  - build
+variables:
+  PROJECT_NAME: "kealm-react"
+rsync_test:
+  stage: build
+  script:
+    - "rm /data/git/release/$PROJECT_NAME/ -Rf"
+    - "NOTICE=`/opt/gitlab/embedded/bin/git log -1 | grep -e ^[#\\|[:space:]]`"
+    - "[[ $NOTICE =~ \".gitlab-ci.yml\" ]] || /opt/gitlab/embedded/bin/git archive --format=tar --prefix=$PROJECT_NAME/ HEAD | (cd /data/git/release/ && tar xf -)"
+    - "[[ $NOTICE =~ \".gitlab-ci.yml\" ]] || rsync  -av --exclude=.gitlab-ci.yml --exclude=log --exclude=logs --exclude=node_modules --delete /data/git/release/$PROJECT_NAME/  root@10.0.3.139:/data/gitlab.karmiy.com/kealm-react/"
+    - "ssh root@10.0.3.139 'cd /data/gitlab.karmiy.com/kealm-react/; npm run publish'"
+  only:
+    - master

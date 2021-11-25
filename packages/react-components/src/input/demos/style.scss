@@ -1,0 +1,8 @@
+@import '../../style/common/var.scss';
+@import '../../style/mixin/mixin';
+
+@include b(demo-input) {
+    @include e(label) {
+        font-size: 14px;
+    }
+}

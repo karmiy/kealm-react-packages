@@ -1,0 +1,299 @@
+/* --------------------------color-------------------------- */
+
+/* theme */
+$color-primary: #4794ff !default;
+$color-regular: #ff4d88 !default;
+$color-info: #666 !default;
+$color-mark: #ff4d4d !default;
+$color-warn: #ff963d !default;
+$color-white: #fff !default;
+$color-black: #000 !default; 
+
+/* transparent */
+$color-text-thin-dark-1: rgba(0, 0, 0, .1) !default;
+$color-text-thin-dark-2: rgba(0, 0, 0, .2) !default;
+$color-text-thin-dark-3: rgba(0, 0, 0, .3) !default;
+$color-text-thin-dark-4: rgba(0, 0, 0, .4) !default;
+$color-text-thin-dark-5: rgba(0, 0, 0, .5) !default;
+$color-text-thin-dark-6: rgba(0, 0, 0, .6) !default;
+$color-text-thin-dark-7: rgba(0, 0, 0, .7) !default;
+$color-text-thin-dark-8: rgba(0, 0, 0, .8) !default;
+$color-text-thin-dark-9: rgba(0, 0, 0, .9) !default;
+
+/* text color */
+$color-text-primary: #323232 !default; // 主要
+$color-text-regular: #999 !default; // 常规
+$color-text-secondary: #b5b5b5 !default; // 次要
+$color-text-placeholder: #b2b2b2 !default; // 占位
+
+/* border color */
+$border-color-base: #e8e8e8 !default;
+$border-color-dark: #cecece !default;
+
+/* background */
+$background-color-base: #f2f2f2 !default;
+$background-color-light: #f5f5f5 !default;
+$background-color-dark: #ebebeb !default;
+
+/* disabled */
+$disabled-text-color: #ccc !default;
+$disabled-background: #ddd !default;
+
+/* z-index */
+$z-index-negative: -1 !default;
+$z-index-S: 1 !default;
+$z-index-M: 10 !default;
+$z-index-L: 100 !default;
+$z-index-XL: 1000 !default;
+
+/* font-size */
+$font-size-XXS: 11px !default;
+$font-size-XS: 12px !default;
+$font-size-S: 13px !default;
+$font-size-M: 14px !default;
+$font-size-L: 15px !default;
+$font-size-XL: 16px !default;
+$font-size-XXL: 17px !default;
+$font-size-XXXL: 18px !default;
+$font-size-XXXXL: 20px !default;
+
+
+/* animation-duration */
+$animation-duration-slow: 0.3s !default;
+$animation-duration-base: 0.2s !default;
+$animation-duration-fast: 0.15s !default;
+
+/* timing-function */
+$ease-base-out: cubic-bezier(0.7, 0.3, 0.1, 1) !default;
+$ease-base-in: cubic-bezier(0.9, 0, 0.3, 0.7) !default;
+$ease-out: cubic-bezier(0.215, 0.61, 0.355, 1) !default;
+$ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19) !default;
+$ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1) !default;
+$ease-out-back: cubic-bezier(0.12, 0.4, 0.29, 1.46) !default;
+$ease-in-back: cubic-bezier(0.71, -0.46, 0.88, 0.6) !default;
+$ease-in-out-back: cubic-bezier(0.71, -0.46, 0.29, 1.46) !default;
+$ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1) !default;
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.34) !default;
+$ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86) !default;
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1) !default;
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06) !default;
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1) !default;
+
+/* iPhoneX */
+$iPhoneX-bar-height: 34px !default;
+
+/* c:overlay */
+$c-overlay-z-index: $z-index-XL !default;
+$c-overlay-background-color: $color-text-thin-dark-4 !default;
+
+
+/* c: button */
+$c-button-height-default: 28px !default;
+$c-button-radius-default: 15px !default;
+$c-button-padding-horizontal-default: 12px !default;
+$c-button-font-size: $font-size-M !default;
+$c-button-height-large: 48px !default;
+$c-button-radius-large: 24px !default;
+$c-button-padding-horizontal-large: 28px !default;
+$c-button-font-size-large: $font-size-XXXL !default;
+$c-button-plain-background-color: $color-white !default;
+$c-button-primary-color: $color-primary !default;
+$c-button-regular-color: $color-regular !default;
+$c-button-info-color: $color-info !default;
+$c-button-disabled-background-color: $disabled-background !default;
+$c-button-disabled-text-color: $color-white !default;
+$c-button-plain-disabled-border-color: $disabled-background !default;
+$c-button-plain-disabled-background-color: $color-white !default;
+$c-button-plain-disabled-text-color: $disabled-text-color !default;
+
+/* c: badge */
+$c-badge-rect: 16px !default;
+$c-badge-dot-rect: 8px !default;
+$c-badge-color: $color-mark !default;
+$c-badge-padding-horizontal: 4px !default;
+$c-badge-text-color: $color-white !default;
+$c-badge-font-size: $font-size-XS !default;
+
+/* c:pop */
+$c-pop-z-index: $z-index-XL !default;
+$c-pop-background-color: $color-text-thin-dark-4 !default;
+
+/* c:input  */
+// default
+$c-input-height-default: 36px !default;
+$c-input-padding-horizontal-default: 14px !default;
+$c-input-radius-default: 18px !default;
+$c-input-font-size-default: $font-size-L !default;
+$c-input-label-gap: 8px !default;
+$c-input-clear-gap: 8px !default;
+// size
+$c-input-height-large: 48px !default;
+$c-input-padding-horizontal-large: 16px !default;
+$c-input-radius-large: 24px !default;
+$c-input-font-size-large: $font-size-XXL !default;
+// color
+$c-input-background-color: $color-white !default;
+$c-input-background-color-grey: $background-color-light !default;
+$c-input-text-color: $color-text-primary !default;
+$c-input-placeholder-color: $color-text-placeholder !default;
+// disabled
+$c-input-disabled-color: $disabled-text-color !default;
+$c-input-disabled-placeholder-color: $disabled-text-color !default;
+// clear
+$c-input-clear-btn-rect: 16px !default;
+
+/* c:textarea */
+// default
+$c-textarea-line-height-default: 22px !default;
+$c-textarea-radius-default: 8px !default;
+$c-textarea-font-size-default: $font-size-M !default;
+$c-textarea-text-color: $color-text-primary !default;
+$c-textarea-placeholder-color: $color-text-placeholder !default;
+$c-textarea-padding-vertical: 12px !default;
+$c-textarea-padding-horizontal: 16px !default;
+$c-textarea-background-color-grey: $background-color-light !default;
+// size
+$c-textarea-line-height-medium: 24px !default;
+$c-textarea-radius-medium: 8px !default;
+$c-textarea-font-size-medium: $font-size-XL !default;
+// disabled
+$c-textarea-disabled-color: $disabled-text-color !default;
+$c-textarea-disabled-placeholder-color: $disabled-text-color !default;
+// count
+$c-textarea-count-height: 24px !default;
+$c-textarea-count-font-size: $font-size-XL !default;
+$c-textarea-count-text-color: $color-text-secondary !default;
+// tag
+$c-textarea-tags-gap: 12px !default;
+$c-textarea-tags-height: 28px !default;
+$c-textarea-tags-padding-horizontal: 6px !default;
+$c-textarea-tags-border-width: 1px !default;
+$c-textarea-tags-border-color: $background-color-dark !default;
+$c-textarea-tags-radius: 15px !default;
+$c-textarea-tags-add-icon-rect: 12px !default;
+$c-textarea-tags-add-icon-gap: 4px !default;
+$c-textarea-tags-font-size: $font-size-XS !default;
+
+/* c:textarea */
+// default
+$c-dialog-width: 270px !default;
+$c-dialog-radius: 12px !default;
+$c-dialog-background-color: $color-white !default;
+// body
+$c-dialog-body-padding-horizontal: 15px !default;
+$c-dialog-body-min-height-without-title: 80px !default;
+// title
+$c-dialog-title-margin-top: 20px !default;
+$c-dialog-title-margin-bottom: 8px !default;
+$c-dialog-title-line-height: 24px !default;
+$c-dialog-title-font-size: $font-size-XXXL !default;
+$c-dialog-title-font-weight: bold !default;
+// content
+$c-dialog-content-line-height: 20px !default;
+$c-dialog-content-margin-bottom: 20px !default;
+$c-dialog-content-font-size: $font-size-M !default;
+$c-dialog-content-letter-spacing: 0.29px !default;
+$c-dialog-content-margin-vertical-without-title: 20px !default;
+// footer
+$c-dialog-footer-height: 50px !default;
+$c-dialog-footer-border-color: $border-color-base !default;
+$c-dialog-footer-font-size: $font-size-XXXL !default;
+$c-dialog-footer-text-color: $color-text-regular !default;
+$c-dialog-footer-ok-text-color: $color-primary !default;
+
+/* c:action-sheet */
+// default
+$c-action-sheet-radius: 12px !default;
+$c-action-sheet-background-color: $color-white !default;
+$c-action-sheet-border-color: $border-color-base !default;
+// title
+$c-action-sheet-title-padding-vertical: 15px !default;
+$c-action-sheet-title-padding-horizontal: 16px !default;
+$c-action-sheet-title-line-height: 18px !default;
+$c-action-sheet-title-font-size: $font-size-S !default;
+$c-action-sheet-title-text-color: $color-text-regular !default;
+// action
+$c-action-sheet-action-line-height: 25px !default;
+$c-action-sheet-action-padding-vertical: 12px !default;
+$c-action-sheet-action-padding-horizontal: 16px !default;
+$c-action-sheet-action-font-size: $font-size-XXXL !default;
+// disabled
+$c-action-sheet-disabled-text-color: $disabled-text-color !default;
+// space
+$c-action-sheet-space-height: 8px !default;
+$c-action-sheet-space-background-color: $background-color-base !default;
+
+/* c:toast */
+// default
+$c-toast-background-color: $color-text-thin-dark-6 !default;
+$c-toast-line-height: 20px !default;
+$c-toast-radius: 8px !default;
+$c-toast-padding-horizontal: 8px !default;
+$c-toast-padding-vertical: 8px !default;
+$c-toast-font-size: $font-size-M !default;
+$c-toast-text-color: $color-white !default;
+// icon
+$c-toast-icon-rect: 54px !default;
+$c-toast-loading-duration: 1.2s !default;
+// with icon
+$c-toast-padding-horizontal-with-icon: 9px !default;
+$c-toast-padding-vertical-with-icon: 20px !default;
+$c-toast-content-width-with-icon: 102px !default;
+$c-toast-content-padding-top-with-icon: 11px !default;
+$c-toast-font-size-with-icon: $font-size-M !default;
+
+/* c:picker-view */
+$c-picker-view-item-grandient-top: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.5) 100%) !default;
+$c-picker-view-item-grandient-bottom: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.95) 100%) !default;
+$c-picker-view-background-color: $color-white !default;
+$c-picker-view-font-size: $font-size-XXXXL !default;
+$c-picker-view-text-color: $color-text-primary !default;
+$c-picker-view-indicator-border-color: $border-color-dark !default;
+
+/* c:picker */
+// default
+$c-picker-radius: 12px !default;
+$c-picker-background-color: $color-white !default;
+// header
+$c-picker-header-height: 44px !default;
+$c-picker-header-border-color: $border-color-base !default;
+// title
+$c-picker-title-height: 44px !default;
+$c-picker-title-font-size: $font-size-XL !default;
+$c-picker-title-text-color: $color-text-primary !default;
+// btn
+$c-picker-btn-height: 44px !default;
+$c-picker-btn-padding-horizontal: 16px !default;
+$c-picker-btn-font-size: $font-size-XL !default;
+$c-picker-btn-text-color: $color-text-primary !default;
+$c-picker-btn-ok-text-color: $color-primary !default;
+// view
+$c-picker-view-padding-vertical: 16px !default;
+
+/* c:date-picker */
+// default
+$c-date-picker-radius: 12px !default;
+$c-date-picker-background-color: $color-white !default;
+// header
+$c-date-picker-header-height: 44px !default;
+$c-date-picker-header-border-color: $border-color-base !default;
+// title
+$c-date-picker-title-height: 44px !default;
+$c-date-picker-title-font-size: $font-size-XL !default;
+$c-date-picker-title-text-color: $color-text-primary !default;
+// btn
+$c-date-picker-btn-height: 44px !default;
+$c-date-picker-btn-padding-horizontal: 16px !default;
+$c-date-picker-btn-font-size: $font-size-XL !default;
+$c-date-picker-btn-text-color: $color-text-primary !default;
+$c-date-picker-btn-ok-text-color: $color-primary !default;
+// view
+$c-date-picker-view-padding-vertical: 16px !default;
+
+/* c:stepper */
+$c-stepper-width: 108px !default;
+$c-stepper-height: 32px !default;
+$c-stepper-background-color: $color-white !default;
+$c-stepper-border-color: $border-color-base !default;
+$c-stepper-radius: 16px !default;
+$c-stepper-plain-font-size: $font-size-L !default;

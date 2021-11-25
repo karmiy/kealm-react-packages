@@ -1,0 +1,41 @@
+/* -----------------------BEM Func--------------------------- */
+
+@function selectorToString($selector) { // .my-button
+    $selector: inspect($selector); // 转字符串=> (.my-button,)    ...会多了个,
+    $selector: str-slice($selector, 2, -2); // .my-button,
+    @return $selector;
+}
+
+@function containsModifier($selector) { // .my-button
+    $selector: selectorToString($selector);
+
+    @if str-index($selector, $modifier-separator) { // 是否有--符号
+        @return true;
+    } @else {
+        @return false;
+    }
+}
+
+@function containWhenFlag($selector) {
+    $selector: selectorToString($selector);
+
+    @if str-index($selector, '.' + $state-prefix) {
+        @return true
+    } @else {
+        @return false
+    }
+}
+
+@function containPseudoClass($selector) {
+    $selector: selectorToString($selector);
+
+    @if str-index($selector, ':') {
+        @return true
+    } @else {
+        @return false
+    }
+}
+
+@function hitAllSpecialNestRule($selector) {
+    @return containsModifier($selector) or containWhenFlag($selector) or containPseudoClass($selector);
+}

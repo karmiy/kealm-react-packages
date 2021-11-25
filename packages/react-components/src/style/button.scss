@@ -1,0 +1,80 @@
+@import 'mixin/mixin';
+@import 'common/var';
+
+@include b(button) {
+    box-sizing: border-box;
+    display: inline-flex;
+    height: $c-button-height-default;
+    padding: 0 $c-button-padding-horizontal-default;
+    border-radius: $c-button-radius-default;
+    justify-content: center;
+    align-items: center;
+    font-size: $c-button-font-size;
+    outline: 0;
+    -webkit-appearance: none;
+    text-align: center;
+    color: #fff;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+
+    @include when(plain) {
+        border-width: 1px;
+        border-style: solid;
+    }
+
+    @include when(plain-without-border) {
+        border-width: 0;
+    }
+
+    /* type */
+    @include m(primary) {
+        background-color: $c-button-primary-color;
+
+        @include when(plain) {
+            border-color: $c-button-primary-color;
+            background-color: $c-button-plain-background-color;
+            color: $c-button-primary-color;
+        }
+    }
+
+    @include m(regular) {
+        background-color: $c-button-regular-color;
+
+        @include when(plain) {
+            border-color: $c-button-regular-color;
+            background-color: $c-button-plain-background-color;
+            color: $c-button-regular-color;
+        }
+    }
+
+    @include m(info) {
+        background-color: $c-button-info-color;
+
+        @include when(plain) {
+            border-color: $c-button-info-color;
+            background-color: $c-button-plain-background-color;
+            color: $c-button-info-color;
+        }
+    }
+
+    /* size */
+    @include m(large) {
+        height: $c-button-height-large;
+        padding: 0 $c-button-padding-horizontal-large;
+        border-radius: $c-button-radius-large;
+        font-size: $c-button-font-size-large;
+    }
+
+    @include when(disabled) {
+        background-color: $c-button-disabled-background-color;
+        color: $c-button-disabled-text-color;
+        cursor: not-allowed;
+
+        @include when(plain) {
+            border-color: $c-button-plain-disabled-border-color;
+            background-color: $c-button-plain-disabled-background-color;
+            color: $c-button-plain-disabled-text-color;
+        }
+    }
+}

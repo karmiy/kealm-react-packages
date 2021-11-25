@@ -1,0 +1,155 @@
+@import 'common/var';
+@import 'mixin/mixin';
+
+@include b(input) {
+    box-sizing: border-box;
+    display: flex;
+    height: $c-input-height-default;
+    padding: 0 $c-input-padding-horizontal-default;
+    border-radius: $c-input-radius-default;
+    background-color: $c-input-background-color;
+    align-items: center;
+
+    @include e(label) {
+        display: flex;
+        margin-right: $c-input-label-gap;
+        align-items: center;
+    }
+
+    @include e(inner) {
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 100%;
+        flex: 1;
+        border: 0;
+        outline: none;
+        background-color: transparent;
+        font-size: $c-input-font-size-default;
+        color: $c-input-text-color;
+
+        &::placeholder {
+            color: $c-input-placeholder-color;
+        }
+    }
+
+    @include e(clear) {
+        width: $c-input-clear-btn-rect;
+        height: $c-input-clear-btn-rect;
+        margin-left: $c-input-clear-gap;
+        cursor: pointer;
+        
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @include m(large) {
+        height: $c-input-height-large;
+        padding: 0 $c-input-padding-horizontal-large;
+        border-radius: $c-input-radius-large;
+
+        @include e(inner) {
+            font-size: $c-input-font-size-large;
+        }
+    }
+
+    @include m(grey) {
+        background-color: $c-input-background-color-grey;
+    }
+
+    @include when(disabled) {
+        cursor: not-allowed;
+
+        .my-input__inner {
+            color: $c-input-disabled-color;
+            -webkit-text-fill-color: $c-input-disabled-color;
+            cursor: not-allowed;
+            opacity: 1;
+            
+            &::placeholder {
+                color: $c-input-disabled-placeholder-color;
+            }
+        }
+    }
+}
+
+/* @include b(input-virtual) {
+    display: flex;
+    position: relative;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+
+    @include m(large) {
+        .my-input-virtual__cursor {
+            height: 24px;
+        }
+    }
+
+    @include m(clearable) {
+        margin-right: 30px;
+    }
+
+    @include e((textbox, placeholder)) {
+        z-index: $z-index-base;
+        font-size: 15px;
+        color: $color-text-regular;
+        white-space: nowrap;
+        pointer-events: none;
+    }
+
+    @include e(textbox) {
+        color: $color-text-primary;
+    }
+
+    @include e(placeholder) {
+        color: $color-text-regular;
+    }
+
+    @include e(cursor) {
+        position: absolute;
+        width: 1px;
+        height: 20px;
+        top: 50%;
+        right: 0;
+        z-index: $z-index-base;
+        background-color: $color-text-primary;
+        transform: translateY(-50%);
+        animation: keyboard-cursor infinite 1s step-start;
+    }
+
+    .my-input__inner {
+        // 让 input 自带光标不可见（不能 opacity: 0，测试发现设置透明 0 会导致聚焦时，IOS 不能自适应调整 input 的位置让其在键盘上方）
+        position: absolute;
+        width: 200%;
+        height: 100%;
+        line-height: 0; // 让 input 自带光标不可见
+        left: 0;
+        top: 0;
+        z-index: 0;
+        outline: 0;
+        margin-left: -100%;
+        text-indent: -999px;
+        // font-size: 0; // PC 端会不能输入
+    }
+}
+
+@keyframes keyboard-cursor {
+    0% {
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+} */

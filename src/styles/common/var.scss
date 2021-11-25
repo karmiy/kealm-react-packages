@@ -1,0 +1,46 @@
+/* --------------------------color-------------------------- */
+
+/* theme */
+$color-primary: #1394ff !default;
+$color-warning: #e7c000 !default;
+$color-danger: #c00 !default;
+
+/* text color */
+$color-text-primary: #404040 !default; // 主要
+$color-text-regular: #999 !default; // 常规
+
+/* background */
+$background-color-base: #f2f2f2 !default;
+$background-color-light-s: #f5f5f5 !default;
+$background-color-light-m: #f7f8fa !default;
+$background-color-light-l: #fafafa !default;
+$background-color-dark-s: #ebebeb !default;
+
+/* border color */
+$border-color-base: #e8e8e8 !default;
+
+/* box-shadow */
+$box-shadow-base: #f0f1f2 !default;
+$box-shadow-dark-s: #ebecee !default;
+
+/* transparent */
+$color-text-thin-dark-1: rgba(0, 0, 0, .1) !default;
+$color-text-thin-dark-2: rgba(0, 0, 0, .2) !default;
+$color-text-thin-dark-3: rgba(0, 0, 0, .3) !default;
+$color-text-thin-dark-4: rgba(0, 0, 0, .4) !default;
+$color-text-thin-dark-5: rgba(0, 0, 0, .5) !default;
+$color-text-thin-dark-6: rgba(0, 0, 0, .6) !default;
+$color-text-thin-dark-7: rgba(0, 0, 0, .7) !default;
+$color-text-thin-dark-8: rgba(0, 0, 0, .8) !default;
+$color-text-thin-dark-9: rgba(0, 0, 0, .9) !default;
+
+/* dark-theme */
+$dark-theme-background-color-base: #141414; 
+$dark-theme-background-color-dark-s: #262626; 
+$dark-theme-background-color-dark-m: #313131; 
+$dark-theme-border-color-base: #6b6c6d; 
+
+/* c-blockquote */
+$c-blockquote-tip-color: $color-primary;
+$c-blockquote-warning-color: $color-warning;
+$c-blockquote-danger-color: $color-danger;

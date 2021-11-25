@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "allowJs": false,
+        "checkJs": false,
+        "declaration": true,
+        "target": "esnext", // 貌似不需要 es5，看别的 RN 组件库也没处理，经过测试，发现 RN 项目打包后是会处理 node_modules 下的包的（如 const => var）
+        "module": "esnext",
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "strict": false,
+        "skipLibCheck": true,
+        "outDir": "lib",
+        "baseUrl": ".",
+        "paths": {
+            "@": ["src"],
+            "@/*": ["src/*"],
+            "@hooks": ["src/hooks"],
+            "@styles": ["src/styles"],
+            "@utils": ["src/utils"],
+            "@utils/*": ["src/utils/*"],
+            "@kealm/rn-components": ["src"],
+            "@kealm/react-packages": ["../../src"],
+          }
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "babel.config.js",
+        "metro.config.js",
+        "index.js",
+        "index.ios.js",
+        "index.android.js",
+    ]
+}

@@ -1,0 +1,107 @@
+@import 'mixin/mixin';
+@import 'common/var';
+
+@include b(textarea) {
+    padding: $c-textarea-padding-vertical $c-textarea-padding-horizontal;
+    border-radius: $c-textarea-radius-default;
+
+    @include m(grey) {
+        background-color: $c-textarea-background-color-grey;
+    }
+
+    @include m(medium) {
+        border-radius: $c-textarea-radius-medium;
+        
+        .my-textarea__control textarea {
+            line-height: $c-textarea-line-height-medium;
+            font-size: $c-textarea-font-size-medium;
+        }
+    }
+
+    @include e(control) {
+        textarea {
+            display: block;
+            width: 100%;
+            line-height: $c-textarea-line-height-default;
+            padding: 0;
+            border: 0;
+            outline: none;
+            background-color: transparent;
+            overflow: visible;
+            font-size: $c-textarea-font-size-default;
+            color: $c-textarea-text-color;
+            resize: none;
+            word-break: break-word;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            &::placeholder {
+                color: $c-textarea-placeholder-color;
+            }
+        }
+    }
+
+    @include when(disabled) {
+        cursor: not-allowed;
+        
+        .my-textarea__control textarea {
+            color: $c-textarea-disabled-color;
+            cursor: not-allowed;
+
+            &::placeholder {
+                color: $c-textarea-disabled-placeholder-color;
+            }
+        }
+    }
+
+    @include e(count) {
+        line-height: $c-textarea-count-height;
+        text-align: right;
+        font-size: $c-textarea-count-font-size;
+        color: $c-textarea-count-text-color;
+
+        @include when(hide) {
+            opacity: 0;
+        }
+    }
+}
+
+@include b(textarea-tags) {
+    margin-top: $c-textarea-tags-gap;
+    overflow: hidden;
+
+    @include e(container) {
+        display: flex;
+        margin: -2px;
+        flex-wrap: wrap;
+    }
+
+    @include e(item) {
+        padding: 2px;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    @include e(item-inner) {
+        box-sizing: border-box;
+        display: flex;
+        height: $c-textarea-tags-height;
+        border: $c-textarea-tags-border-width solid $c-textarea-tags-border-color;
+        border-radius: $c-textarea-tags-radius;
+        padding: 0 $c-textarea-tags-padding-horizontal;
+        justify-content: center;
+        align-items: center;
+        font-size: $c-textarea-tags-font-size;
+
+        .icon {
+            width: $c-textarea-tags-add-icon-rect;
+            height: $c-textarea-tags-add-icon-rect;
+            margin-right: $c-textarea-tags-add-icon-gap;
+        }
+
+        & > div {
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,160 @@
+@import 'mixin/mixin';
+@import 'common/var';
+@import 'pop';
+
+// TODO: 不需要放在 var.scss，时长由 JS 来控制
+$c-drawer-duration: $animation-duration-fast;
+
+@include b(drawer) {
+
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+
+    @include e(wrapper) {
+        overflow: hidden;
+    }
+
+    @include e((wrapper, content)) {
+        width: 100%;
+        height: 100%;
+    }
+
+    @include when(left) {
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    @include when(right) {
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: auto;
+    }
+
+    @include when(top) {
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    @include when(bottom) {
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        top: auto;
+    }
+
+    /* animation */
+    &-fade-enter, &-fade-appear {
+        @include when(right) {
+            .my-drawer__content {
+                transform: translateX(100%);
+            }
+        }
+
+        @include when(left) {
+            .my-drawer__content {
+                transform: translateX(-100%);
+            }
+        }
+
+        @include when(top) {
+            .my-drawer__content {
+                transform: translateY(-100%);
+            }
+        }
+
+        @include when(bottom) {
+            .my-drawer__content {
+                transform: translateY(100%);
+            }
+        }
+    }
+
+    &-fade-enter-active, &-fade-appear-active {
+        &.my-drawer .my-drawer__content {
+            transition: transform $c-drawer-duration;
+        }
+
+        @include when(left) {
+            .my-drawer__content {
+                transform: translateX(0);
+            }
+        }
+
+        @include when(right) {
+            .my-drawer__content {
+                transform: translateX(0);
+            }
+        }
+
+        @include when(top) {
+            .my-drawer__content {
+                transform: translateY(0);
+            }
+        }
+
+        @include when(bottom) {
+            .my-drawer__content {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &-fade-exit {
+        @include when(left) {
+            .my-drawer__content {
+                transform: translateX(0);
+            }
+        }
+
+        @include when(right) {
+            .my-drawer__content {
+                transform: translateX(0);
+            }
+        }
+
+        @include when(top) {
+            .my-drawer__content {
+                transform: translateY(0);
+            }
+        }
+        @include when(bottom) {
+            .my-drawer__content {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &-fade-exit-active {
+        &.my-drawer .my-drawer__content {
+            transition: transform $c-drawer-duration;
+        }
+    
+        @include when(right) {
+            .my-drawer__content {
+                transform: translateX(100%);
+            }
+        }
+
+        @include when(left) {
+            .my-drawer__content {
+                transform: translateX(-100%);
+            }
+        }
+
+        @include when(top) {
+            .my-drawer__content {
+                transform: translateY(-100%);
+            }
+        }
+        @include when(bottom) {
+            .my-drawer__content {
+                transform: translateY(100%);
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import 'var';
+@import '../mixin/mixin';
+@import '../mixin/utils';
+
+$c-overlay-duration: $animation-duration-fast;
+
+@include b(overlay) {
+    @include positionFill(fixed);
+    z-index: $c-overlay-z-index;
+    background-color: $c-overlay-background-color;
+
+    /* animation */
+    &-fade-appear {
+        opacity: 0;
+    }
+
+    &-fade-appear-active {
+        opacity: 1;
+        transition: opacity $c-overlay-duration;
+    }
+
+    &-fade-enter {
+        opacity: 0;
+    }
+
+    &-fade-enter-active {
+        opacity: 1;
+        transition: opacity $c-overlay-duration;
+    }
+
+    &-fade-exit {
+        opacity: 1;
+    }
+    
+    &-fade-exit-active {
+        opacity: 0;
+        transition: opacity $c-overlay-duration;
+    }
+}

@@ -1,0 +1,48 @@
+@import 'mixin/mixin';
+@import 'mixin/utils';
+@import 'common/var';
+
+@include b(picker-view) {
+    background-color: $c-picker-view-background-color;
+
+    @include e(container) {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    @include e(item) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $c-picker-view-font-size;
+        color: $c-picker-view-text-color;
+        user-select: none;
+    }
+
+    @include e(indicator) {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        pointer-events: none;
+        
+        @include thinBorder(('top', 'bottom'), $c-picker-view-indicator-border-color);
+    }
+
+    @include e(mask) {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        pointer-events: none;
+
+        @include m(top) {
+            top: 0;
+            background-image: $c-picker-view-item-grandient-top;
+        }
+
+        @include m(bottom) {
+            bottom: 0;
+            background-image: $c-picker-view-item-grandient-bottom;
+        }
+    }
+}

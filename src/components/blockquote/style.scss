@@ -1,0 +1,52 @@
+@import '../../styles';
+
+@include b(blockquote) {
+    margin: 16px 0;
+    padding: 1.6px 24px;
+    border-left-width: 8px;
+    border-left-style: solid;
+
+    @include m(tip) {
+        border-color: $c-blockquote-tip-color;
+        background-color: mix($c-blockquote-tip-color, #fff, 5%);
+    }
+
+    @include m(warning) {
+        border-color: $c-blockquote-warning-color;
+        background-color: mix($c-blockquote-warning-color, #fff, 10%);
+
+        @include e(title) {
+            color: mix($c-blockquote-warning-color, #000, 60%);
+        }
+
+        @include e(content) {
+            color: mix($c-blockquote-warning-color, #000, 40%);
+        }
+    }
+
+    @include m(danger) {
+        border-color: $c-blockquote-danger-color;
+        background-color: mix($c-blockquote-danger-color, #fff, 10%);
+
+        @include e(title) {
+            color: mix($c-blockquote-danger-color, #000, 60%);
+        }
+
+        @include e(content) {
+            color: mix($c-blockquote-danger-color, #000, 40%);
+        }
+    }
+
+    @include e(title) {
+        margin-top: 16px;
+        margin-bottom: -6.4px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    @include e(content) {
+        line-height: 1.7;
+        margin: 16px 0;
+        font-size: 15px;
+    }
+}

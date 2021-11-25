@@ -1,0 +1,48 @@
+@import 'mixin/mixin';
+@import 'common/var';
+@import 'safe-area-bottom';
+@import 'drawer';
+
+@include b(action-sheet) {
+    border-radius: $c-action-sheet-radius $c-action-sheet-radius 0 0;
+    background-color: $c-action-sheet-background-color;
+    overflow: hidden;
+    color: $color-text-primary;
+
+    @include e(title) {
+        position: relative;
+        line-height: $c-action-sheet-title-line-height;
+        padding: $c-action-sheet-title-padding-vertical $c-action-sheet-title-padding-horizontal;
+        font-size: $c-action-sheet-title-font-size;
+        color: $c-action-sheet-title-text-color;
+        text-align: center;
+
+        @include thinBorder((bottom), $c-action-sheet-border-color);
+    }
+
+    @include e(option) {
+        position: relative;
+        cursor: pointer;
+
+        @include m(border) {
+            @include thinBorder((bottom), $c-action-sheet-border-color);
+        }
+
+        @include when(disabled) {
+            color: $c-action-sheet-disabled-text-color;
+            cursor: not-allowed;
+        }
+    }
+
+    @include e(text) {
+        line-height: $c-action-sheet-action-line-height;
+        padding: $c-action-sheet-action-padding-vertical $c-action-sheet-action-padding-horizontal;
+        font-size: $c-action-sheet-action-font-size;
+        text-align: center;
+    }
+
+    @include e(space) {
+        height: $c-action-sheet-space-height;
+        background-color: $c-action-sheet-space-background-color;
+    }
+}

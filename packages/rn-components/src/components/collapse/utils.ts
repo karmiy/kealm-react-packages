@@ -1,0 +1,1 @@
+export const MAGIC_MEASURABLE_HEIGHT = 0.001;

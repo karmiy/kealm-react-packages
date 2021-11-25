@@ -1,0 +1,22 @@
+@import '../../styles';
+
+@include b(demo-block) {
+    padding: 0 15px;
+
+    &:first-child {
+        @include e(title) {
+            margin-top: 16px;
+        }
+    }
+
+    @include e(title) {
+        margin-top: 24px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: $color-text-regular;
+    }
+
+    @include e(body) {
+        margin: 12px 0;
+    } 
+}

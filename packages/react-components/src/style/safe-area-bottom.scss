@@ -1,0 +1,9 @@
+@import 'mixin/mixin';
+@import 'mixin/utils';
+@import 'common/var';
+
+@include b(safe-area-bottom) {
+    @include iPhoneXMedia {
+        height: $iPhoneX-bar-height;
+    }
+}

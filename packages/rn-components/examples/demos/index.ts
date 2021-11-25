@@ -1,0 +1,17 @@
+export { default as DemoText } from './text';
+export { default as DemoBadge } from './badge';
+export { default as DemoButton } from './button';
+export { default as DemoInput } from './input';
+export { default as DemoTextarea } from './textarea';
+export { default as DemoPop } from './pop';
+export { default as DemoDrawer } from './drawer';
+export { default as DemoDialog } from './dialog';
+export { default as DemoActionSheet } from './action-sheet';
+export { default as DemoToast } from './toast';
+export { default as DemoPickerView } from './picker-view';
+export { default as DemoPicker } from './picker';
+export { default as DemoDatePickerView } from './date-picker-view';
+export { default as DemoDatePicker } from './date-picker';
+export { default as DemoStripRefreshControl } from './strip-refresh-control';
+export { default as DemoCollapse } from './collapse';
+export { default as DemoStepper } from './stepper';

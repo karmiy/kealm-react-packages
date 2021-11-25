@@ -1,0 +1,17 @@
+// cSpell Settings
+// 拼写检查插件设置 https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
+{
+    // language - current active spelling language
+    "language": "en",
+    // words - list of words to be always considered correct
+    "words": [
+        "karmiy",
+        "kealm"
+    ],
+    // flagWords - list of words to be always considered incorrect
+    // This is useful for offensive words and common spelling errors.
+    // For example "hte" should be "the"
+    "flagWords": [
+        "hte"
+    ]
+}

@@ -1,0 +1,93 @@
+@import '../common/var';
+
+/* user-select */
+@mixin utils-user-select($value) {
+    -moz-user-select: $value;
+    -webkit-user-select: $value;
+    -ms-user-select: $value;
+}
+
+/* 单行超出省略 */
+@mixin utils-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 多行超出省略 */
+@mixin utils-ellipsis-multiple($line: 2) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+}
+
+@mixin positionFill($position: absolute) {
+    position: $position;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* 1px mixin */
+// 元素需要设置 postion 如 relative
+@mixin thinBorder($directionMaps: bottom, $color: $border-color-base, $radius:(0, 0, 0, 0), $position: after) {
+    &:#{$position} {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: 0 0;
+        border: 0 solid $color;
+        pointer-events: none;
+    
+        @if(list == type-of($radius)) {
+            border-radius: 
+                nth($radius, 1) * 2 
+                nth($radius, 2) * 2 
+                nth($radius, 3) * 2 
+                nth($radius, 4) * 2;
+        }
+    
+        @else {
+            border-radius: $radius * 2;
+        }
+    
+        @each $directionMap in $directionMaps {
+            border-#{$directionMap}-width: 1px;
+        }
+    }
+  }
+
+  /* iPhoneX Media 查询 */
+@mixin iPhoneXMedia {
+    /* iPhoneX, iPhonex xs */
+    @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+        @content;
+    }
+  
+    /* iPhone xs max */
+    @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+        @content;
+    }
+  
+    /* iPhone xr */
+    @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+        @content;
+    }
+  
+    /* iPhone 12/12pro */
+    @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+        @content;
+    }
+  
+    /* iPhone 12pro max */
+    @media only screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) {
+        @content;
+    }
+}

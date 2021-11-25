@@ -1,0 +1,49 @@
+@import 'mixin/mixin';
+@import 'mixin/utils';
+@import 'common/var';
+@import 'drawer';
+@import 'date-picker-view';
+
+@include b(date-picker) {
+    border-radius: $c-date-picker-radius $c-date-picker-radius 0 0;
+    background-color: $c-date-picker-background-color;
+    overflow: hidden;
+
+    @include e(header) {
+        display: flex;
+        position: relative;
+        height: $c-date-picker-header-height;
+        align-items: center;
+
+        @include thinBorder(('bottom'), $c-date-picker-header-border-color);
+    }
+
+    @include e(title) {
+        display: flex;
+        height: $c-date-picker-title-height;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        font-size: $c-date-picker-title-font-size;
+        color: $c-date-picker-title-text-color;
+    }
+
+    @include e(btn) {
+        display: flex;
+        height: $c-date-picker-btn-height;
+        padding: 0 $c-date-picker-btn-padding-horizontal;
+        justify-content: center;
+        align-items: center;
+        font-size: $c-date-picker-btn-font-size;
+        color: $c-date-picker-btn-text-color;
+        cursor: pointer;
+
+        @include when(ok) {
+            color: $c-date-picker-btn-ok-text-color;
+        }
+    }
+
+    @include e(view) {
+        padding: $c-date-picker-view-padding-vertical 0;
+    }
+}

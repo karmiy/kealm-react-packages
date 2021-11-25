@@ -1,0 +1,17 @@
+@import '../../style/common/var.scss';
+@import '../../style/mixin/mixin';
+
+@include b(demo-textarea) {
+    @include e(white-box) {
+        background-color: #fff;
+    }
+
+    @include e(scale-box) {
+        margin: 0 -16px;
+        padding: 8px 16px;
+    }
+
+    @include e(full-box) {
+        width: 100%;
+    }
+}

@@ -1,0 +1,11 @@
+@mixin dark-theme {
+    $selector: &;
+
+    @at-root {
+        [data-prefers-color=dark] {
+            #{$selector} {
+                @content;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import '../../style/common/var.scss';
+@import '../../style/mixin/mixin';
+
+@include b(demo-drawer) {
+    @include e(box) {
+        position: relative;
+        background-color: mix($color-primary, #fff, 20%);
+
+        @include when(vertical) {
+            height: 200px;
+        }
+
+        @include when(horizontal) {
+            width: 150px;
+            height: 100%;
+        }
+    }
+}
