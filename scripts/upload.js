@@ -16,7 +16,7 @@ async function uploadAssets() {
 
 /* 构建 */
 async function release() {
-    await uploadAssets();
+    // await uploadAssets();
 }
 
 release().catch(err => {

@@ -6,7 +6,7 @@
     "clean": "lerna clean",
     "dev": "dumi dev",
     "docs:build": "dumi build && node ./scripts/upload.js",
-    "publish": "lerna bootstrap && node ./scripts/publish.js",
+    "publish": "node ./scripts/publish.js",
     "upgrade": "node ./scripts/upgrade.js",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"

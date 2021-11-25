@@ -1,6 +1,6 @@
 {
     "name": "@kealm/rn-components",
-    "version": "0.3.16",
+    "version": "1.0.0",
     "description": "React Native UI 组件库",
     "repository": {
         "type": "git",
@@ -20,7 +20,7 @@
         "@kealm/react-hooks": "^0.0.2"
     },
     "dependencies": {
-        "@kealm/react-hooks": "1.0.5",
+        "@kealm/react-hooks": "^1.0.0",
         "date-fns": "^2.16.1",
         "deepmerge": "^4.2.2",
         "react-native-linear-gradient": "^2.5.6"

@@ -1,6 +1,6 @@
 {
     "name": "@kealm/react-mobile",
-    "version": "0.4.9",
+    "version": "1.0.0",
     "description": "移动端 React UI 组件库",
     "main": "lib/index.js",
     "typings": "lib/index.d.ts",
@@ -15,12 +15,12 @@
         "publish": "npm run build:lib && npm publish"
     },
     "peerDependencies": {
-        "@kealm/react-hooks": "^0.1.0"
+        "@kealm/react-hooks": "^1.0.0"
     },
     "devDependencies": {
         "@babel/core": "^7.14.3",
         "@babel/preset-env": "^7.14.2",
-        "@kealm/react-hooks": "1.0.5",
+        "@kealm/react-hooks": "1.0.0",
         "@rollup/plugin-babel": "^5.3.0",
         "@rollup/plugin-node-resolve": "^13.0.0",
         "@types/node": "^15.12.2",

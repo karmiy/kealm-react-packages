@@ -9,11 +9,9 @@ const isReactMobileLibEntry = false;
 export default defineConfig({
   mode: 'site',
   title: 'Kealm',
-  favicon: '/logo.ico',
-  // logo: 'https://static.seeyouyima.com/www.meiyou.com/meiyou-4c6b85bc28c1410ac99d3392c30a1283.png',
-  logo: '/logo.png',
+  favicon: isBrowserRouter ? '/logo.ico' : './logo.ico',
+  logo: isBrowserRouter ? '/logo.png' : './logo.png',
   outputPath: 'docs-dist',
-  // publicPath: isBrowserRouter ? '/' : 'https://static.karmiy.com/kealm-react-packages/',
   publicPath: isBrowserRouter ? '/' : './',
   history: { type: isBrowserRouter ? 'browser' : 'hash' },
   resolve: {
