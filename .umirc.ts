@@ -11,7 +11,7 @@ export default defineConfig({
   title: 'Kealm',
   favicon: isBrowserRouter ? '/logo.ico' : './logo.ico',
   logo: isBrowserRouter ? '/logo.png' : './logo.png',
-  outputPath: 'docs-dist',
+  outputPath: 'dist',
   publicPath: isBrowserRouter ? '/' : './',
   history: { type: isBrowserRouter ? 'browser' : 'hash' },
   resolve: {
