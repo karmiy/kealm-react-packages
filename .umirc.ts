@@ -11,11 +11,11 @@ export default defineConfig({
   title: 'Kealm',
   favicon: isBrowserRouter ? '/logo.ico' : './logo.ico',
   logo: isBrowserRouter ? '/logo.png' : './logo.png',
-  outputPath: 'dist',
+  outputPath: 'docs-dist',
   publicPath: isBrowserRouter ? '/' : './',
   history: { type: isBrowserRouter ? 'browser' : 'hash' },
   resolve: {
-    includes: ['docs', 'packages'],
+    includes: ['documents', 'packages'],
   },
   chainWebpack: memo => memo.resolve.extensions.add('.css'),
   alias: {

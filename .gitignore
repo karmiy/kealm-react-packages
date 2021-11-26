@@ -6,6 +6,7 @@ yarn.lock
 package-lock.json
 
 # production
+dist
 lib
 
 # misc
