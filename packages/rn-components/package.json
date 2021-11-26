@@ -1,6 +1,6 @@
 {
     "name": "@kealm/rn-components",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "React Native UI 组件库",
     "repository": {
         "type": "git",
@@ -8,19 +8,20 @@
     },
     "main": "index.js",
     "typings": "index.d.ts",
+    "homepage": "https://karmiy.github.io/kealm-react-packages/docs-dist/index.html",
     "scripts": {
         "android": "react-native run-android",
         "ios": "react-native run-ios",
         "start": "react-native start --reset-cache",
         "tsc:src": "tsc -p ./tsconfig.prod.json",
         "build:lib": "npm run tsc:src && node scripts/release.js",
-        "publish": "npm run build:lib && cd lib && npm publish"
+        "publish": "npm run build:lib && cd lib && npm publish --access public"
     },
     "peerDependencies": {
         "@kealm/react-hooks": "^0.0.2"
     },
     "dependencies": {
-        "@kealm/react-hooks": "^1.0.0",
+        "@kealm/react-hooks": "1.0.1",
         "date-fns": "^2.16.1",
         "deepmerge": "^4.2.2",
         "react-native-linear-gradient": "^2.5.6"

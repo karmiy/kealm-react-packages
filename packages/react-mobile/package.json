@@ -1,18 +1,19 @@
 {
     "name": "@kealm/react-mobile",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "移动端 React UI 组件库",
     "main": "lib/index.js",
     "typings": "lib/index.d.ts",
     "files": [
         "lib"
     ],
+    "homepage": "https://karmiy.github.io/kealm-react-packages/docs-dist/index.html",
     "scripts": {
         "build:theme": "gulp build --gulpfile ./gulpfile.js",
         "build:images": "node ./scripts/image-base64.js",
         "build:components": "tsc -p ./tsconfig.prod.json",
         "build:lib": "npm run build:images && npm run build:components && npm run build:theme",
-        "publish": "npm run build:lib && npm publish"
+        "publish": "npm run build:lib && npm publish --access public"
     },
     "peerDependencies": {
         "@kealm/react-hooks": "^1.0.0"
@@ -20,7 +21,7 @@
     "devDependencies": {
         "@babel/core": "^7.14.3",
         "@babel/preset-env": "^7.14.2",
-        "@kealm/react-hooks": "1.0.0",
+        "@kealm/react-hooks": "1.0.1",
         "@rollup/plugin-babel": "^5.3.0",
         "@rollup/plugin-node-resolve": "^13.0.0",
         "@types/node": "^15.12.2",

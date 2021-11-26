@@ -1,13 +1,14 @@
 {
     "name": "@kealm/react-hooks",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "React hooks",
     "main": "lib/index.js",
     "typings": "lib/index.d.ts",
     "scripts": {
         "build:lib": "tsc -p ./tsconfig.prod.json",
-        "publish": "npm run build:lib && node scripts/release.js && cd lib && npm publish"
+        "publish": "npm run build:lib && node scripts/release.js && cd lib && npm publish --access public"
     },
+    "homepage": "https://karmiy.github.io/kealm-react-packages/docs-dist/index.html",
     "peerDependencies": {
         "react": "^16.8.0"
     },
