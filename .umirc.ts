@@ -15,7 +15,7 @@ export default defineConfig({
   publicPath: isBrowserRouter ? '/' : './',
   history: { type: isBrowserRouter ? 'browser' : 'hash' },
   resolve: {
-    includes: ['documents', 'packages'],
+    includes: ['docs', 'packages'],
   },
   chainWebpack: memo => memo.resolve.extensions.add('.css'),
   alias: {
